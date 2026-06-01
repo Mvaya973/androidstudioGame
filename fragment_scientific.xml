@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark"
+    android:padding="4dp">
+
+    <!-- Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:background="@color/bg_display">
+
+        <TextView
+            android:id="@+id/sci_display_expr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/sci_display_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@color/text_primary"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start"
+            android:text="0" />
+    </LinearLayout>
+
+    <!-- Scientific top row: INV, RAD, (, ), π, e -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:columnCount="6"
+        android:rowCount="1"
+        android:padding="2dp">
+
+        <TextView android:id="@+id/btn_inv"     style="@style/SciSmallBtn" android:text="INV"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_rad_deg" style="@style/SciSmallBtn" android:text="RAD"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_open_par"  style="@style/SciSmallBtn" android:text="("  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_close_par" style="@style/SciSmallBtn" android:text=")"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_pi"      style="@style/SciSmallBtn" android:text="π"    android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_e"       style="@style/SciSmallBtn" android:text="e"    android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+    </GridLayout>
+
+    <!-- Scientific functions row 1: sin cos tan log ln sqrt -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:columnCount="6"
+        android:rowCount="1"
+        android:padding="2dp">
+
+        <TextView android:id="@+id/btn_sin"   style="@style/SciSmallBtn" android:text="sin" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_cos"   style="@style/SciSmallBtn" android:text="cos" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_tan"   style="@style/SciSmallBtn" android:text="tan" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_log"   style="@style/SciSmallBtn" android:text="log" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_ln"    style="@style/SciSmallBtn" android:text="ln"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_sqrt"  style="@style/SciSmallBtn" android:text="√"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+    </GridLayout>
+
+    <!-- Scientific functions row 2: x² x³ 1/x eˣ 10ˣ |x| -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:columnCount="6"
+        android:rowCount="1"
+        android:padding="2dp">
+
+        <TextView android:id="@+id/btn_pow2"    style="@style/SciSmallBtn" android:text="x²"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_pow3"    style="@style/SciSmallBtn" android:text="x³"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_inv_x"   style="@style/SciSmallBtn" android:text="1/x" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_exp"     style="@style/SciSmallBtn" android:text="eˣ"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_pow10"   style="@style/SciSmallBtn" android:text="10ˣ" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_abs"     style="@style/SciSmallBtn" android:text="|x|" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+    </GridLayout>
+
+    <!-- Scientific functions row 3: xʸ y√x n! and standard ops -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:columnCount="6"
+        android:rowCount="1"
+        android:padding="2dp">
+
+        <TextView android:id="@+id/btn_pow"       style="@style/SciSmallBtn" android:text="xʸ"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_yroot"     style="@style/SciSmallBtn" android:text="y√x" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/btn_factorial" style="@style/SciSmallBtn" android:text="n!"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/sci_btn_percent" style="@style/SciSmallBtn" android:text="%"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/sci_btn_sign"    style="@style/SciSmallBtn" android:text="+/-" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <TextView android:id="@+id/sci_btn_clear"   style="@style/SciSmallBtn" android:text="AC"  android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+    </GridLayout>
+
+    <!-- Main numpad -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:padding="2dp">
+
+        <Button android:id="@+id/sci_btn_7" style="@style/NumBtn" android:text="7" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_8" style="@style/NumBtn" android:text="8" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_9" style="@style/NumBtn" android:text="9" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_div" style="@style/OpBtn" android:text="÷" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+
+        <Button android:id="@+id/sci_btn_4" style="@style/NumBtn" android:text="4" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_5" style="@style/NumBtn" android:text="5" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_6" style="@style/NumBtn" android:text="6" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_mul" style="@style/OpBtn" android:text="×" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+
+        <Button android:id="@+id/sci_btn_1" style="@style/NumBtn" android:text="1" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_2" style="@style/NumBtn" android:text="2" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_3" style="@style/NumBtn" android:text="3" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_sub" style="@style/OpBtn" android:text="-" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+
+        <Button android:id="@+id/sci_btn_del" style="@style/FuncBtn" android:text="⌫" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_0"   style="@style/NumBtn"  android:text="0" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_dot" style="@style/NumBtn"  android:text="." android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/sci_btn_add" style="@style/OpBtn"   android:text="+" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+    </GridLayout>
+
+    <!-- Equal button -->
+    <Button
+        android:id="@+id/sci_btn_equal"
+        style="@style/EqBtn"
+        android:text="="
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:layout_margin="4dp"/>
+
+</LinearLayout>

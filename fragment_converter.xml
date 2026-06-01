@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convertisseur de Bases Numériques"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrez une valeur dans n'importe quel champ"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:paddingBottom="20dp"/>
+
+        <!-- DECIMAL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DÉC"
+                    android:textColor="@color/accent_blue"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base 10"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:hint="0"
+                android:textColorHint="@color/text_hint"
+                android:background="@android:color/transparent"
+                android:padding="4dp"/>
+
+            <Button
+                android:id="@+id/btn_copy_dec"
+                style="@style/CopyBtn"
+                android:text="Copier"/>
+        </LinearLayout>
+
+        <!-- BINARY -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BIN"
+                    android:textColor="@color/accent_green"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base 2"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_binary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:digits="01"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:hint="0"
+                android:textColorHint="@color/text_hint"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:singleLine="false"
+                android:maxLines="3"/>
+
+            <Button
+                android:id="@+id/btn_copy_bin"
+                style="@style/CopyBtn"
+                android:text="Copier"/>
+        </LinearLayout>
+
+        <!-- HEX -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="HEX"
+                    android:textColor="@color/accent_orange"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base 16"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_hex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:digits="0123456789ABCDEFabcdef"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:hint="0"
+                android:textColorHint="@color/text_hint"
+                android:background="@android:color/transparent"
+                android:padding="4dp"/>
+
+            <Button
+                android:id="@+id/btn_copy_hex"
+                style="@style/CopyBtn"
+                android:text="Copier"/>
+        </LinearLayout>
+
+        <!-- OCTAL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OCT"
+                    android:textColor="@color/accent_purple"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Base 8"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_octal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:digits="01234567"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:hint="0"
+                android:textColorHint="@color/text_hint"
+                android:background="@android:color/transparent"
+                android:padding="4dp"/>
+
+            <Button
+                android:id="@+id/btn_copy_oct"
+                style="@style/CopyBtn"
+                android:text="Copier"/>
+        </LinearLayout>
+
+        <!-- Reference table -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/bg_card"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tableau de référence"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DÉC  BIN      OCT  HEX\n 0   0000     0    0\n 1   0001     1    1\n 2   0010     2    2\n 3   0011     3    3\n 4   0100     4    4\n 5   0101     5    5\n 6   0110     6    6\n 7   0111     7    7\n 8   1000     10   8\n 9   1001     11   9\n10   1010     12   A\n11   1011     13   B\n12   1100     14   C\n13   1101     15   D\n14   1110     16   E\n15   1111     17   F"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_clear_conv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effacer tout"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/btn_func"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+</ScrollView>
